@@ -10,7 +10,11 @@ COPY --from=py3 / /
 ARG PYSPARK_VERSION=3.2.0
 RUN pip --no-cache-dir install pyspark==${PYSPARK_VERSION}
 
-COPY . /app
 WORKDIR /app
+COPY requirements.txt /app/requirements.txt
+RUN pip install -r requirements.txt
+
+COPY . /app
+
 
 CMD ["python", "main.py"]

@@ -6,6 +6,5 @@ services:
     volumes:
       - /Users/maksim/Desktop/imdb_data:/app/data
     working_dir: /app
-    command: ["python", "main.py"]
     stdin_open: true
     tty: true
