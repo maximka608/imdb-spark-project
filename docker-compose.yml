@@ -4,7 +4,7 @@ services:
   my-spark:
     build: .
     volumes:
-      - /Users/maksim/Desktop/imdb_data:/app/data
-    working_dir: /app
+      - /Users/maksim/Desktop/imdb_data:/utils/data
+    working_dir: /utils
     stdin_open: true
     tty: true
